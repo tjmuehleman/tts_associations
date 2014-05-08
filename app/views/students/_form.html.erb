@@ -20,6 +20,8 @@
     <%= f.text_field :last_name %>
   </div>
   <!--comment-->
+  Team Name<br>
+
   <%= f.select :team_id, Team.all.collect {|team| [ team.name, team.id ] } %>
 
   <div class="actions">

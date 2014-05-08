@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
   
-  # this url = /teams/2/showstudents
+  get "owners/:id/allpets" => "owners#allpets"
+  get "owners/allpets" => "owners#allpets"
+  get "teams/numteams" => "teams#numteams"
+  post "teams/createteams" => "teams#createteams"
   
   get "teams/:id/showstudents" => "teams#showstudents"
 
+
+  resources :pets
+
+  resources :owners
+
+  # this url = /teams/2/showstudents
+  
+  
 
   resources :students
 
